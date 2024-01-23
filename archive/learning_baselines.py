@@ -59,9 +59,9 @@ model = PPO("MlpPolicy", env=env, learning_rate=0, verbose=1)
 #     """Mutate parameters by adding normal noise to them"""
 #     return dict((name, param + th.randn_like(param)) for name, param in params.items())
 
-print(model.learning_rate)
-model.learning_rate = 0.001
-print(model.learning_rate)
+# print(model.learning_rate)
+# model.learning_rate = 0.001
+# print(model.learning_rate)
 
 for i in range(5):
     model.learn(total_timesteps=200)
